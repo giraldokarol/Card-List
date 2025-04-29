@@ -7,8 +7,7 @@ export class App extends LitElement {
     }
 
     render(){
-        return html `
-            <h1 class="hola">Hello World</h1>    
+        return html `  
         `
     }
 }
