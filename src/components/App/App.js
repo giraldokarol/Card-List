@@ -7,7 +7,16 @@ export class App extends LitElement {
     }
 
     render(){
-        return html `  
+        return html `
+            <header>
+                <div class="geo_nav_menu">
+                    <div class="geo_nav_menu_tabs">
+                        <a class="geo_nav_menu_tabs_item" title="Homepage">
+                            <span class="geo_home_icon"></span>
+                        </a>
+                    </div>
+                </div>
+            </header>    
         `
     }
 }

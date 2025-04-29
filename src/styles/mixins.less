@@ -1,0 +1,52 @@
+/*Mixing to create the SVGs as mask-images*/
+.svg_icon(){
+    &::before {
+        content: '';
+        vertical-align: middle;
+        display: inline-block;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: 1rem;
+        width: 1rem;
+        height: 1rem;
+        background: #000;
+    }
+}
+
+/*Mixing to edit/override the size of the icons*/
+.svg_icon_size(@size){
+    &::before {
+        mask-size: @size;
+        width: @size;
+        height: @size;
+    }
+}
+
+/*Mixing to edit/override the color of the icons*/
+.svg_icon_size(@color){
+    &::before {
+        background: @color;
+    }
+}
+
+//Apply the svg_icon mixin to all icons to make them visible.
+[class*="_icon"]{
+    .svg_icon();
+}
+
+//Icon classes -> Initialization of the icons' mask-images
+.geo_home_icon::before{mask-image: url("../icons/home.svg");}
+.geo_notification_icon::before{mask-image: url("../icons/notification.svg");}
+.geo_mail_icon::before{mask-image: url("../icons/mail.svg");}
+.geo_suppport_icon::before{mask-image: url("../icons/support.svg");}
+.geo_settings_icon::before{mask-image: url("../icons/settings.svg");}
+.geo_star_icon::before{mask-image: url("../icons/star.svg");}
+.geo_search_icon::before{mask-image: url("../icons/search.svg");}
+.geo_add_icon::before{mask-image: url("../icons/add.svg");}
+.geo_public_icon::before{mask-image: url("../icons/public.svg");}
+.geo_eye_icon::before{mask-image: url("../icons/eye.svg");}
+.geo_brush_icon::before{mask-image: url("../icons/brush.svg");}
+.geo_copy_file_icon::before{mask-image: url("../icons/copy_file.svg");}
+.geo_trash_icon::before{mask-image: url("../icons/trash.svg");}
+.geo_more_icon::before{mask-image: url("../icons/more.svg");}
+.geo_check_icon::before{mask-image: url("../icons/check.svg");}

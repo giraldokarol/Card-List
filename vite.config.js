@@ -13,7 +13,7 @@ export default defineConfig({
           less: {
             javascriptEnabled: true,
             //Definition of global variables -> Now, the file can be use for all the components
-            additionalData: `@import "@/styles/variables.less";`
+            additionalData: `@import "@/styles/variables.less"; @import "@/styles/mixins.less";`
           }
         }
   }
