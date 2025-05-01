@@ -57,7 +57,7 @@ src/
 
 ## :computer: Instalation
 ```bash
-git clone 
+git clone https://github.com/giraldokarol/Card-List.git
 npm install
 npm run dev
 ```
