@@ -81,43 +81,44 @@ export class App extends LitElement {
             <header class="geo_header" role="banner">
                 <div class="geo_nav_menu">
                     <div class="geo_nav_menu_tabs">
-                        <a class="geo_nav_menu_tabs_item" title="Homepage" href="#">
+                        <a class="geo_nav_menu_tabs_item" title="Page d'accueil" href="#">
                             <span class="geo_home_icon" aria-hidden="true"></span>
                         </a>
                     </div>
 
                     <nav role="navigation" aria-label="Principal Menu" class="geo_nav_menu_links">
-                        <button type="button" aria-expanded="false" class="geo_burger_btn" @click="${this.toggleMenuMobile}">
+                        <button type="button" aria-expanded="${this.isOpen}" class="geo_burger_btn" @click="${this.toggleMenuMobile}">
                             <span class="geo_burger_btn_container" aria-hidden="true">
                                 <span class="geo_burger_btn_lines"></span>
+                                <span class="invisible">Menu</span>
                             </span>
                         </button>
                         <div class="geo_nav_menu_links_container">
                             <ul class="geo_nav_menu_items">
                                 <li>
-                                    <menu-link title="Go to favorites page" iconClass="geo_star_icon" text="Favorites"></menu-link>                                    
+                                    <menu-link title="Aller à la page de favorites" iconClass="geo_star_icon" text="Favorites"></menu-link>                                    
                                 </li>
                                 <li>
-                                    <menu-link title="Go to setting page" iconClass="geo_settings_icon" text="Configuration"></menu-link>
+                                    <menu-link title="Aller à la page de configuration" iconClass="geo_settings_icon" text="Configuration"></menu-link>
                                 </li>
                                 <li>
-                                    <menu-link title="Go to help page" iconClass="geo_suppport_icon" text="Help Page"></menu-link>
+                                    <menu-link title="Aller à la page d'aide" iconClass="geo_suppport_icon" text="Aide"></menu-link>
                                 </li>
                                 <li>
-                                    <menu-link title="Go to see your messages" iconClass="geo_mail_icon" notification="4" text="Messages"></menu-link>
+                                    <menu-link title="Aller à la messagerie" iconClass="geo_mail_icon" notification="4" text="Messagerie"></menu-link>
                                 </li>
                                 <li>
-                                <menu-link title="Go to notifications page" iconClass="geo_notification_icon" .separator="${false}" text="Notification"></menu-link>
+                                <menu-link title="Aller à la page de notifications" iconClass="geo_notification_icon" .separator="${false}" text="Notifications"></menu-link>
                                 </li>
                             </ul>
                             <div class="geo_authen_container">
                                 ${this.isOpen
                                     ? html`
-                                        <img src="${profilImage}" alt="Profil Photo" width="40" height="40"/>
-                                        <a href="#" title="Sign Out" class="geo_authen_container_link">Sign out</a>`
+                                        <img src="${profilImage}" alt="Votre photo de profil" width="40" height="40"/>
+                                        <a href="#" title="Fermer la session" class="geo_authen_container_link">Fermer la session</a>`
                                     : html`
-                                        <a href="#" title="Show Profil Options">
-                                            <img src="${profilImage}" alt="Profil Photo" width="40" height="40"/>
+                                        <a href="#" title="Montrer la configuration du Profil">
+                                            <img src="${profilImage}" alt="Votre photo de profil" width="40" height="40"/>
                                         </a>`
                                 }
                             </div>
@@ -134,9 +135,9 @@ export class App extends LitElement {
                     </div>
 
                     <div role="search" class="geo_search">
-                       <label class="geo_search_label">Rechercher</label>
+                       <label for="searchInput" class="geo_search_label">Rechercher</label>
                        <div>
-                            <input type="text" title="Votre recherche d'une ressource" placeholder="Nom d'une ressource" .value="${this.searchData}" @input="${this.handleSearchData}">
+                            <input id="searchInput" type="text" title="Votre recherche d'une ressource" placeholder="Nom d'une ressource" .value="${this.searchData}" @input="${this.handleSearchData}">
                             <button type="button" class="geo_search_btn">
                                 <span class="invisible">Lancer la recherche</span>
                                 <span aria-hidden="true" class="geo_search_icon"></span>

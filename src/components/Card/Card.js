@@ -20,7 +20,7 @@ export class Card extends LitElement {
         return html `
             <div class="geo_card">
                 <div class="geo_card_header">
-                    <input type="checkbox" class="geo_card_check">
+                    <input type="checkbox" class="geo_card_check" aria-label="Sélectionner la carte de ${this.card.userName}">
                     <div class="geo_card_title">
                         <span aria-hidden="true" class="${this.card.iconClass}"></span>
                         <label>${this.card.userName}</label>
@@ -30,10 +30,10 @@ export class Card extends LitElement {
                     <div class="geo_card_image">
                         ${this.card.image == ""
                             ? html `
-                                <span class="geo_public_icon"></span>
+                                <span class="geo_public_icon" aria-hidden="true"></span>
                             `
                             : html `
-                                <img .src="${this.card.image}" alt="">
+                                <img .src="${this.card.image}" alt="image de la ressource ${this.card.name}">
                             `
                         }
                     </div>
@@ -55,28 +55,28 @@ export class Card extends LitElement {
                 <div class="geo_card_footer">
                     <ul class="geo_card_links">
                         <li class="geo_card_item">
-                            <a href="" class="geo_card_link" title="Regarder completement l'information">
-                                <span class="geo_eye_icon"></span>
+                            <a href="" class="geo_card_link" title="Voir les détails" aria-label="Regarder">
+                                <span class="geo_eye_icon" aria-hidden="true"></span>
                             </a>
                         </li>
                         <li class="geo_card_item">
-                            <a href="" class="geo_card_link" title="Regarder completement l'information">
-                                <span class="geo_brush_icon"></span>
+                            <a href="" class="geo_card_link" title="Modifier la carte" aria-label="Modifier">
+                                <span class="geo_brush_icon" aria-hidden="true"></span>
                             </a>
                         </li>
                         <li class="geo_card_item">
-                            <a href="" class="geo_card_link" title="Regarder completement l'information">
-                                <span class="geo_copy_file_icon"></span>
+                            <a href="" class="geo_card_link" title="Copier la carte" aria-label="Copier">
+                                <span class="geo_copy_file_icon" aria-hidden="true"></span>
                             </a>
                         </li>
                         <li class="geo_card_item">
-                            <a href="" class="geo_card_link" title="Regarder completement l'information">
-                                <span class="geo_trash_icon"></span>
+                            <a href="" class="geo_card_link" title="Supprimer la carte" aria-label="Supprimer">
+                                <span class="geo_trash_icon" aria-hidden="true"></span>
                             </a>
                         </li>
                         <li class="geo_card_item">
-                            <a href="" class="geo_card_link" title="Regarder completement l'information">
-                                <span class="geo_more_icon"></span>
+                            <a href="" class="geo_card_link" title="Plus d'options" aria-label="Plus">
+                                <span class="geo_more_icon" aria-hidden="true"></span>
                             </a>
                         </li> 
                     </ul>
