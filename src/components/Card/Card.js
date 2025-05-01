@@ -1,4 +1,5 @@
 import { html, LitElement } from "lit";
+import './Card.less';
 import fakeImage from "../../images/card-media.png";
 
 export class Card extends LitElement {
@@ -17,7 +18,7 @@ export class Card extends LitElement {
 
     render(){
         return html `
-            <div class="geo_card_chckbtn">
+            <div class="geo_card">
                 <div class="geo_card_header">
                     <input type="checkbox" class="geo_card_check">
                     <div class="geo_card_title">
@@ -41,12 +42,12 @@ export class Card extends LitElement {
                         <p class="geo_card_description">${this.card.description}</p>
                         <div class="geo_card_info">
                             <div class="geo_card_date_content">
-                                <span>Modifié le</span>
+                                <span><strong>Modifié le</strong></span>
                                 <span class="geo_card_date">${this.card.modificationDate}</span>
                             </div>
                             <div class="geo_card_app_content">
-                                <span>Application</span>
-                                <span>Mon Application</span>
+                                <span><strong>Application</strong></span>
+                                <span class="geo_card_app">Mon Application</span>
                             </div>
                         </div>
                     </div>

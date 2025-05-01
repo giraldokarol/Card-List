@@ -1,0 +1,127 @@
+@card_background: #FFF;
+@card_maxwidth: 274px;
+@card_radius: 8px;
+
+.geo_card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: @card_background;
+    border-radius: @card_radius;
+
+    ///Header///
+    &_header {
+        .flex_basic();
+        gap: 24px;
+        padding: 14px 8px;
+    }
+
+    &_title {
+        .flex_basic();
+        gap: 8px;
+        span[class*="_icon"]{
+            .svg_icon_size(24px);
+        }
+        label {
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+
+    ///Body///
+    &_body{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_image {
+        height: 120px;
+        background: @gray_light2;
+        position: relative;
+        span[class*="_icon"]{
+            .svg_icon_size(72px);
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 120px;
+            object-fit: contain;
+        }
+    }
+
+    &_content {
+        padding: 16px;
+    }
+
+    &_name {
+        font-size: 14px;
+        font-weight: 600;
+        min-height: 43px;
+        text-transform: capitalize;
+        margin-bottom: 16px;
+    }
+
+    &_description {
+        font-size: 13px;
+        color: @gray_primary;
+        min-height: 43px;
+        text-overflow: ellipsis;
+        margin-bottom: 16px;
+    }
+
+    &_info {
+        .flex_basic();
+        justify-content: space-between;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    &_app_content{
+        align-items: flex-end;
+    }
+
+    &_date_content, &_app_content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_date,
+    &_app {
+        color: @gray_primary; 
+        font-weight: 500;
+    }
+
+    ///Footer///
+    &_footer {
+        display: flex;
+        justify-content: center;
+        padding: 8px 34px;
+    }
+    
+    &_links {
+        .flex_basic();
+        gap: 8px;
+    }
+
+    &_item, &_link {
+        height: 36px;
+        width: 36px;
+    }
+
+    &_link {
+        text-decoration: none;
+        .flex_basic();
+        justify-content: center;
+        span[class*="_icon"]{
+            .svg_icon_size(24px);
+            .svg_icon_color(@blue_primary);
+        }
+    }
+}

@@ -6,10 +6,20 @@ function randomImage(image) {
   return randomOption ? image : "";
 }
 
+function formatDate() {
+  const today = new Date();
+  const day = String(today.getDate()).padStart(2, '0');
+  const month = String(today.getMonth()+1).padStart(2, '0');
+  const year = String(today.getFullYear()).slice(-2);
+  return `${day}/${month}/${year}`;
+}
+
+formatDate()
+
 export function generateCard() {
   return {
     id: faker.string.uuid(),
-    modificationDate: Date.now(),
+    modificationDate: formatDate(),
     userName: faker.person.fullName(),
     image: randomImage(fakeImage),
     name: faker.lorem.words(3),

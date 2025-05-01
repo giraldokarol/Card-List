@@ -8,6 +8,14 @@ html {
     font-family: @body_font;
 }
 
+h1,h2,h3 {
+    margin: 0;
+}
+
+p {
+    margin: 5px 0;
+}
+
 body {
     margin: 0;
     background: @blue_light;
@@ -53,5 +61,32 @@ select {
     overflow: hidden;
     opacity: 0;
     top: -10000px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid @blue_light2;
+    border-radius: 2px;
+    height: 16px;
+    width: 16px;
+    background: #FFF;
+    margin: 4px;
+
+    &:checked {
+        position: relative;
+        border: 1px solid @blue_primary;
+        background: @blue_primary;
+        .svg_icon(10px);
+        .svg_icon_img (@check_icon);
+        .svg_icon_color(#FFF);
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
 }
 
