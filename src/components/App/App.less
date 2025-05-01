@@ -1,0 +1,128 @@
+.geo_nav_menu {
+    .flex_basic();
+    background: @blue_light;
+    height: 40px;
+
+    &_tabs{
+        .flex_basic();
+        height: 100%;
+        &_item {
+            .flex_basic();
+            background: #FFF;
+            height: 100%;
+            padding: 0 16px;
+            [class*="_icon"] {
+                .svg_icon_size(24px);
+            }
+        }
+    }
+
+    .geo_burger_btn {
+        display: none;
+    }
+
+    &_items, &_links_container {
+        .flex_basic();
+    }
+
+    &_links{
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: @breakpoint_smartphone) {
+    .geo_nav_menu {
+        .geo_burger_btn {
+            display: flex;
+        }
+
+        &_links_container{
+            flex-direction: column;
+            align-items: flex-start;
+            position: fixed;
+            right: -100%;
+            top: @menu_height;
+            background: #FFF;
+            width: 100%;
+            height: calc(100vh - @menu_height);
+            transition: right 0.3s ease-in;
+        }
+
+        &_items{
+            flex-direction: column;
+            width: 100%;
+            align-items: flex-start;
+            padding-top: 20px;
+
+            li {
+                width: 100%;
+            }
+        }
+
+        .geo_burger_btn {
+            border: 0;
+            background: none;
+            padding: 0;
+            cursor: pointer;
+            width: @menu_burger_width;
+            height: @menu_burger_width;
+            margin-right: 16px;
+
+            &_container{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all .5s ease-in-out;
+            }
+
+            &_lines, &_lines::before, &_lines::after{
+                width: @menu_burger_width;
+                height: 3px;
+                background: @body_color;
+                transition: all .3s ease-in-out;
+            }
+
+            &_lines{
+                &::before, &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                }
+                &:before {transform: translateY(-7px);}
+                &:after {transform: translateY(7px);}
+            }
+        }
+
+        .geo_authen_container{
+            margin-top: auto;
+            padding: 0 16px 20px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            &_link {
+                text-decoration: none;
+                color: @body_color;
+            }
+        }
+    }
+
+    .menumobile {
+        .geo_nav_menu_links_container{
+            right: 0;
+        }
+
+        .geo_burger_btn .geo_burger_btn_lines {
+            transform: translateX(-50px);
+            background: @blue_light;
+            &::before{
+                transform: rotate(45deg) translate(35px, -35px);
+            }
+            &::after {
+                transform: rotate(-45deg) translate(35px, 35px);
+            }
+        }
+    } 
+}

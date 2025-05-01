@@ -9,7 +9,7 @@
         mask-size: 1rem;
         width: 1rem;
         height: 1rem;
-        background: #000;
+        background: @black_primary;
     }
 }
 
@@ -23,7 +23,7 @@
 }
 
 /*Mixing to edit/override the color of the icons*/
-.svg_icon_size(@color){
+.svg_icon_color(@color){
     &::before {
         background: @color;
     }
@@ -50,3 +50,22 @@
 .geo_trash_icon::before{mask-image: url("../icons/trash.svg");}
 .geo_more_icon::before{mask-image: url("../icons/more.svg");}
 .geo_check_icon::before{mask-image: url("../icons/check.svg");}
+
+
+////////////////////////
+/*Flex Mixings*/
+.flex_basic(@wrap:nowrap){
+    display: flex;
+    align-items: center;
+    & when(@wrap = wrap){flex-wrap: wrap;}
+}
+
+
+//////////////////////
+/*Font Loader*/
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-VariableFont.woff2') format('woff2');
+    font-weight: 100 900; // Rango de pesos
+    font-style: normal;
+}
