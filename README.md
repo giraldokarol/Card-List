@@ -14,7 +14,8 @@ Projet conçu dans le cadre d'une évaluation technique.
 - [x] (optionnel) HTML sémantique / accessibilité.
 - [ ] (optionnel) l'interface est thématisée.
 
-## Interface :
+## :art: Interface :
+![Logo](public/interface.png)
 
 ## :ledger: Technologies principales :
 - **Vite :** Bundle et dev server
