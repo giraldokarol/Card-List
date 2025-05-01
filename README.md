@@ -23,6 +23,7 @@ Projet conçu dans le cadre d'une évaluation technique.
 - **Faker :** Librairie pour génerer fake data
 
 ## :file_folder: Structure
+```txt
 src/
 │── components/
 │   ├── App                     👈 Vue principal
@@ -52,6 +53,7 @@ src/
 │── index.html
 │── main.js
 │── vite.config.js
+```
 
 ## :computer: Instalation
 ```bash
