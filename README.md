@@ -21,3 +21,41 @@ Projet conçu dans le cadre d'une évaluation technique.
 - **Vite :** Bundle et dev server
 - **Lit :** Framework (Components : JS + Less)
 - **Faker :** Librairie pour génerer fake data
+
+## :file_folder: Structure
+src/
+│── components/
+│   ├── App                     👈 Vue principal
+|       ├── App.js
+|       ├── App.less
+|   ├── Card                    👈 Componsant Carte
+|       ├── Card.js
+|       ├── Card.less
+|   ├── MenuLinks               👈 Composant pour le liens du menu de navigation
+|       ├── MenuLinks.js
+|       ├── MenuLinks.less
+│
+│── data/
+│   ├── data_card.js            👈 fichier pour la création de données faux pour les cartes (Librairie : Faker)
+│
+│── fonts/                      👈 Polices
+|
+|── icons/                       👈 Fichiers .svg 
+|
+|── images/                      👈 Images statiques 
+│
+│── styles/                    
+│   ├── base.less               👈 Styles globales
+│   ├── mixins.less             👈 Mixins pour la gestions des pictos / Init de la police
+|   ├── variables.less          👈 Variables globales
+|
+│── index.html
+│── main.js
+│── vite.config.js
+
+## :computer: Instalation
+```bash
+git clone 
+npm install
+npm run dev
+```
