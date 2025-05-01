@@ -1,4 +1,3 @@
-/*Trying to simulate a normalize file*/
 *, :after, :before {
     box-sizing: border-box;
 }
@@ -33,5 +32,26 @@ textarea {
 }
 
 
-//////////////////////////////////////////
+input[type="text"],
+optgroup,
+select {
+    min-height: @input_minheight;
+    min-width: 190px;
+    border-radius: @input_radius;
+    border: 1px solid @blue_light2;
+    font-size: 13px;
+    padding: 0 8px;
+
+    &:focus-visible {
+        outline: 2px solid @blue_primary;
+        outline-offset: -1px;
+    }
+}
+
+.invisible {
+    position: absolute;
+    overflow: hidden;
+    opacity: 0;
+    top: -10000px;
+}
 
