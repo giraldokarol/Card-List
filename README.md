@@ -5,7 +5,7 @@ Solution web légère développée avec Lit et Vite.
 Projet conçu dans le cadre d'une évaluation technique.
 **Tâche principale :** Développement d'une interface affichant une liste de cartes, avec fonctionnalités de recherche et de création de nouvelles cartes.
 
-###Tâches à completer :
+### Tâches à completer :
 - [x] Le bouton "créer" permet d'instancier un composant "carte" dans l'interface. Le contenu peut être généré aléatoirement.
 - [x] Les autres boutons sont statiques, pas de comportement attendus à implémenter dessus.
 - [x] Les images sur les cards sont des images statiques.
@@ -14,3 +14,9 @@ Projet conçu dans le cadre d'une évaluation technique.
 - [x] (optionnel) HTML sémantique / accessibilité.
 - [ ] (optionnel) l'interface est thématisée.
 
+## Interface :
+
+## :ledger: Technologies principales :
+- **Vite :** Bundle et dev server
+- **Lit :** Framework (Components : JS + Less)
+- **Faker :** Librairie pour génerer fake data
