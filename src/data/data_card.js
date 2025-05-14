@@ -14,8 +14,6 @@ function formatDate() {
   return `${day}/${month}/${year}`;
 }
 
-formatDate()
-
 export function generateCard() {
   return {
     id: faker.string.uuid(),

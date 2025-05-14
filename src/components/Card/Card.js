@@ -1,6 +1,5 @@
 import { html, LitElement } from "lit";
 import './Card.less';
-import fakeImage from "../../images/card-media.png";
 
 export class Card extends LitElement {
     static properties = {
